@@ -1,0 +1,53 @@
+/* Copyright 2014 Sam Hewitt.
+*
+* This file is part of the Stark GTK theme.
+*
+* The Stark GTK theme is free software: you can redistribute it
+* and/or modify it under the terms of the GNU General Public License as
+* published by the Free Software Foundation, either version 3 of the
+* License, or (at your option) any later version.
+*
+* The Stark GTK theme is distributed in the hope that it will be
+* useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+* Public License for more details.
+*
+* You should have received a copy of the GNU General Public License along
+* with the Stark GTK theme. If not, see http://www.gnu.org/licenses/.
+*/
+
+/***************
+ * Action bars *
+ ***************/
+.action-bar {
+    border-width: 1px 0 0;
+    border: solid @border;
+    background: @background;
+
+    padding: 6px 6px 5px 6px;
+    box-shadow: none;
+}
+
+.action-bar:backdrop {
+    border:none;
+    box-shadow: none;
+    background-color: @backdrop_background;
+}
+
+.action-bar .button.text-button {
+    padding: 3px 8px;
+}
+
+.action-bar .button.image-button {
+    padding: 3px 8px;
+}
+
+.action-bar .title {
+    font: Bold 11;
+    padding: 0px 12px 0px 12px;
+}
+
+.action-bar .subtitle {
+    font: 9;
+    padding: 0px 12px 0px 12px;
+}
