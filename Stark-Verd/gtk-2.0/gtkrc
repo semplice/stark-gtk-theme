@@ -1,9 +1,9 @@
 # Stark-Verd GTK2 Theme
 
-gtk_color_scheme = "bg_color:#ffffff\nselected_bg_color:#98ECA3\nbase_color:#ffffff" # Background: main, selected, base 
+gtk_color_scheme = "bg_color:#ffffff\nselected_bg_color:#A9D49F\nbase_color:#ffffff" # Background: main, selected, base 
 gtk_color_scheme = "fg_color:#444\nselected_fg_color:#ffffff\ntext_color:#444"       # Foreground: main, selected, text
 gtk_color_scheme = "tooltip_bg_color:#444\ntooltip_fg_color:#FFF"                    # Tooltips
-gtk_color_scheme = "link_color:#98ECA3"                                              # Hyperlinks
+gtk_color_scheme = "link_color:#A9D49F"                                              # Hyperlinks
 gtk_color_scheme = "menubar_bg_color:#ffffff\nmenubar_fg_color:#444444"				 # Menu bar colors
 gtk_color_scheme = "toolbar_bg_color:#ffffff\ntoolbar_fg_color:#444444"				 # Toolbar colors
 gtk_color_scheme = "menu_bg_color:#ffffff\nmenu_fg_color:#444444"					 # Menu colors
