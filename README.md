@@ -30,10 +30,10 @@ There are scripts to simplify the rendering process;to run them (and edit icons)
 
 To render new assets from their source SVG files, run the following:
 
-    ./render-*-gtk3-assets.py
-    ./render-*-gtk3-assets-hidpi.py
-    ./render-*-metacity-assets.py
-    ./render-*-unity-assets.py
+    ./scripts/render-*-gtk3-assets.py
+    ./scripts/render-*-gtk3-assets-hidpi.py
+    ./scripts/render-*-metacity-assets.py
+    ./scripts/render-*-unity-assets.py
 
 If it's throwing an error, the script may not be executable, try:
 	
