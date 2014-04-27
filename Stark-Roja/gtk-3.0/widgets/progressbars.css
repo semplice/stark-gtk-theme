@@ -89,7 +89,7 @@ GtkProgressBar.trough {
 .trough row:selected:focus {
     border-radius: 20px;
     background-color: @base;
-    border: 1px solid @selection;
+    border: 1px solid @border;
 }
 
 .trough.vertical row,

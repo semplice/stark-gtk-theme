@@ -30,27 +30,27 @@ GtkSwitch {
 GtkSwitch.trough {
     color: @selection;
     border-radius: 0px;
-    border: 1px solid @selection;
+    border: 1px solid @border;
     background-color: @background;
     box-shadow:none;
 }
 
 GtkSwitch.slider {
     border-radius: 0px;
-    border: 1px solid @selection;
+    border: 1px solid @border;
     background-color: @background;
 }
 
 
 /* Active */
 GtkSwitch.slider:active {
-    border: 1px solid @selection;
+    border: 1px solid @border;
     background-color: @background;
 }
 
 GtkSwitch.trough:active {
     color: white;
-    border: 1px solid @selection;
+    border: 1px solid @border;
     background:@selection;
 }
 

@@ -42,7 +42,7 @@ GtkCombobox *:insensitive {
 GtkCombobox *:selected {
     color: white;
     background-color: @selection;
-    border: 1px solid @selection;
+    border: 1px solid @border;
 }
 
 GtkCombobox *:backdrop {
@@ -57,7 +57,7 @@ GtkCombobox *:insensitive:backdrop {
 }
 
 GtkCombobox *:selected:backdrop {
-    border: 1px solid @selection;
+    border: 1px solid @border;
     color: @backdrop_selected_foreground;
     background-color: @backdrop_selected_background
 }
@@ -140,7 +140,7 @@ GtkComboBox.combobox-entry:insensitive {
 GtkComboBox.combobox-entry:selected {
     color: white;
     background-color: @selection;
-    border: 1px solid @selection;
+    border: 1px solid @border;
 }
 
 GtkComboBox.combobox-entry:insensitive {

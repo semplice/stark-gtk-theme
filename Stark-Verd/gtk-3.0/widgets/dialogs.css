@@ -78,7 +78,7 @@ GtkMessageDialog {
 .dialog-action-area.linked .button.default:active,
 .dialog-action-area.linked .button.default:insensitive,
 .dialog-action-area.linked .button:focus {
-    border-color: @selection;
+    border-color: @border;
     border-width: 1px;
     -GtkWidget-focus-line-width: 0;
 }

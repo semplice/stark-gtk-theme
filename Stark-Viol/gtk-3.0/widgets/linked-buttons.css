@@ -45,7 +45,7 @@
 .inline-toolbar.toolbar GtkToolButton > .button {
     border-radius: 6px;
     box-shadow: none;
-    border: 1px solid @selection;
+    border: 1px solid @border;
 }
 
 .linked .button:first-child,
@@ -54,7 +54,7 @@
 .inline-toolbar.toolbar .button:first-child,
 .inline-toolbar.toolbar GtkToolButton:first-child > .button {
     box-shadow: none;
-    border: 1px solid @selection;
+    border: 1px solid @border;
 }
 
 .linked .button:last-child,
@@ -63,7 +63,7 @@
 .inline-toolbar.toolbar .button:last-child,
 .inline-toolbar.toolbar GtkToolButton:last-child > .button {
     box-shadow: none;
-    border: 1px solid @selection;
+    border: 1px solid @border;
 }
 
 .linked .button:active,
@@ -74,7 +74,7 @@
     color: white;
     background:@selection;
     box-shadow: none;
-    border: 1px solid @selection;
+    border: 1px solid @border;
 }
 
 .linked .button:insensitive,

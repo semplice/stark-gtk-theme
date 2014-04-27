@@ -62,7 +62,7 @@
 /* Pointer Selection */
 .view.rubberband,
 .rubberband {
-    border: 1px solid @selection;
+    border: 1px solid @border;
     background-color: alpha(@selection ,0.4);
 }
 
@@ -129,13 +129,13 @@ GtkTextView {
  ************/
 GtkIconView.view {
     background-color: @base;
-    border: solid @selection;
+    border: solid @border;
     border-top-width: 1px;
 }
  
 GtkIconView.view.cell:selected,
 GtkIconView.view.cell:selected:focus {
-    border: 1px solid @selection;
+    border: 1px solid @border;
     border-radius: 6px;
     background-color: alpha(@selection, 0.7);
     color: @selected_foreground;

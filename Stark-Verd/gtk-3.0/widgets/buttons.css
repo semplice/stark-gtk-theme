@@ -97,7 +97,7 @@
     border-radius: 6px;
     color: white;
     background:@selection;
-    border: 1px solid @selection;
+    border: 1px solid @border;
 }
 
 .button.default:hover,
@@ -105,14 +105,14 @@
     border-radius: 6px;
     color: white;
     background:@selection;
-    border: 1px solid @selection;
+    border: 1px solid @border;
 }
 
 .button.default:active:hover {
     border-radius: 6px;
     color: white;
     background:@selection;
-    border: 1px solid @selection;
+    border: 1px solid @border;
 }
 
 /****************************
@@ -122,14 +122,14 @@
 .suggested-action.button {
     color: white;
     background:@selection;
-    border: 1px solid @selection;
+    border: 1px solid @border;
 }
 
 .toolbar .suggested-action.button:hover,
 .suggested-action.button:hover {
     color: white;
     background:@selection;
-    border: 1px solid @selection;
+    border: 1px solid @border;
 }
 
 .toolbar .suggested-action.button:active,
@@ -138,7 +138,7 @@
 .suggested-action.button:hover:active {
     color: white;
     background:@selection;
-    border: 1px solid @selection;
+    border: 1px solid @border;
 }
 
 .toolbar .suggested-action.button:backdrop,
