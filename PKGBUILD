@@ -1,6 +1,6 @@
 pkgname=stark-gtk-git
 ﻿_pkgname=stark-gtk-theme
-pkgver=1.0.0
+pkgver=1.0
 pkgrel=1
 pkgdesc="Stark is a modern GTK3 theme for Linux."
 arch=('any')

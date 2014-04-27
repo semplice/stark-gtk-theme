@@ -14,7 +14,7 @@
 
 
 Name:		stark-gtk-theme
-Version:	2.2
+Version:	1.0
 Release:	0
 
 Summary:	Stark GTK Theme
@@ -29,7 +29,7 @@ BuildArch:	noarch
 
 
 %description
-Ceru GTK3 Theme
+Stark GTK3 Theme
 
 %prep
 %setup -q
@@ -40,8 +40,14 @@ Ceru GTK3 Theme
 install -dpm 0755 $RPM_BUILD_ROOT%{_datadir}/themes/
 cp -a Stark-Ceru/ $RPM_BUILD_ROOT%{_datadir}/themes/
 cp -a Stark-Lutu/ $RPM_BUILD_ROOT%{_datadir}/themes/
+cp -a Stark-Roja/ $RPM_BUILD_ROOT%{_datadir}/themes/
+cp -a Stark-Verd/ $RPM_BUILD_ROOT%{_datadir}/themes/
+cp -a Stark-Viol/ $RPM_BUILD_ROOT%{_datadir}/themes/
 
 %files
 %doc {AUTHORS,LICENSE}
 %{_datadir}/themes/Stark-Ceru/
 %{_datadir}/themes/Stark-Lutu/
+%{_datadir}/themes/Stark-Roja/
+%{_datadir}/themes/Stark-Verd/
+%{_datadir}/themes/Stark-Viol/
