@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=Stark-Roja
+Comment=The one and only.
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=Stark-Roja
+MetacityTheme=Stark-Roja
+IconTheme=Moka

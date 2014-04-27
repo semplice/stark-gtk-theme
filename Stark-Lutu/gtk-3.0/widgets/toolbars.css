@@ -1,0 +1,492 @@
+/* Copyright 2014 Sam Hewitt.
+*
+* This file is part of the Stark GTK theme .
+*
+* The Stark GTK theme is free software: you can redistribute it
+* and/or modify it under the terms of the GNU General Public License as
+* published by the Free Software Foundation, either version 3 of the
+* License, or (at your option) any later version.
+*
+* The Stark GTK theme is distributed in the hope that it will be
+* useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+* Public License for more details.
+*
+* You should have received a copy of the GNU General Public License along
+* with the Stark GTK theme . If not, see http://www.gnu.org/licenses/.
+*/
+
+/***********
+ * Toolbar *
+ ***********/
+
+/* Main Colors*/
+.toolbar {
+    color: @text;
+    border:none;
+    padding: 4px;
+    background-color: @background;
+}
+
+.toolbar .button {
+    border-radius: 6px;
+    border: 1px solid @border;
+    padding: 4px;
+}
+
+.toolbar:insensitive {
+    color: @insensitive_text;
+    background-color: @insensitive_background;
+}
+
+.toolbar:backdrop {
+    color: @backdrop_text;
+    background-color: @backdrop_background;
+}
+
+/* Button Padding */
+.toolbar .button.text-button {
+    padding: 2px 16px;
+}
+
+.toolbar .button.image-button {
+    padding-top: 4px;
+    padding-left: 4px;
+    padding-bottom: 4px;
+    padding-right: 4px;
+}
+
+.toolbar GtkComboBox,
+.toolbar .button {
+    color: @text;
+    background:none;
+}
+
+.toolbar GtkComboBox:active,
+.toolbar .button:active {
+    color: white;
+    background-color:@selection;
+    border: @border;
+}
+
+.toolbar .separator,
+.toolbar .button .separator,
+.toolbar .button.separator {
+    color: transparent;
+}
+
+/* Hover */
+.toolbar .button:hover {
+    color: white;
+    background-color: @selection;
+}
+
+.toolbar .button:active:hover {
+    color: white;
+    background-color: alpha(@selection,0.7);
+}
+
+/* Insensitive */
+.toolbar .button:insensitive,
+.toolbar .button:active:insensitive {
+    border: @insensitive_border;
+    background-color: @insensitive_background;
+    color: @insensitive_text;
+}
+
+.toolbar .separator:insensitive,
+.toolbar .button .separator:insensitive,
+.toolbar .button.separator:insensitive {
+    color: @insensitive_separator;
+}
+
+/* backdrop */
+.toolbar .button:backdrop,
+.toolbar .button:active:backdrop {
+    color: @backdrop_text;
+    background-color: @backdrop_background;
+    border: @backdrop_border;
+}
+
+.toolbar .separator:backdrop,
+.toolbar .button .separator:backdrop,
+.toolbar .button.separator:backdrop {
+    color: transparent;
+}
+
+
+/*******************
+ * Primary Toolbar *
+ *******************/
+
+/* Normal */
+.primary-toolbar.toolbar,
+.primary-toolbar .toolbar {
+    border: none;
+    padding: 4px 6px 4px 6px;
+    background-color: @background;
+}
+
+/* Backdrop */
+.primary-toolbar.toolbar:backdrop,
+.primary-toolbar .toolbar:backdrop {
+    background-color: @backdrop_background;
+    box-shadow:none;
+}
+
+
+/* Buttons */
+.primary-toolbar .button.text-button {
+    padding-top: 2px;
+    padding-left: 4px;
+    padding-bottom: 2px;
+    padding-right: 4px;
+    color: @text;
+}
+
+.primary-toolbar GtkComboBox,
+.primary-toolbar .button,
+.primary-toolbar .button.image-button {
+    color: @text;
+    background-color: @background;
+}
+
+/* Buttons Active */
+.primary-toolbar GtkComboBox:active,
+.primary-toolbar .button:active,
+.primary-toolbar .button.image-button:active {
+    color: white;
+    background-color:@selection;
+    border: @border;
+}
+
+/* Button separator */
+.primary-toolbar .separator,
+.primary-toolbar .button .separator,
+.primary-toolbar .button.separator {
+    color: @insensitive_separator;
+}
+
+/* Hover buttons */
+.primary-toolbar .button:hover {
+    color: white;
+    background-color: @selection;
+}
+
+.primary-toolbar .button:active:hover {
+    color: white;
+    background-color: alpha(@selection,0.7);
+}
+
+
+/* Insensitive buttons */
+.primary-toolbar .button:insensitive,
+.primary-toolbar .button:active:insensitive {
+    border:1px solid @insensitive_border;
+    background-color: @insensitive_background;
+    color: @insensitive_text;
+}
+
+.primary-toolbar .separator:insensitive,
+.primary-toolbar .button .separator:insensitive,
+.primary-toolbar .button.separator:insensitive {
+    color: @insensitive_separator;
+}
+
+/* backdrop buttons */
+.primary-toolbar .button:backdrop,
+.primary-toolbar .button:active:backdrop {
+    color: @backdrop_text;
+    background-color: @background-color;
+}
+
+.primary-toolbar .separator:backdrop,
+.primary-toolbar .button .separator:backdrop,
+.primary-toolbar .button.separator:backdrop {
+    color: @backdrop_separator;
+}
+
+/*********************
+* Secondary Toolbars *
+*********************/
+
+.secondary-toolbar.toolbar {
+    padding: 2px;
+    background-color:@background;
+    border:none;
+}
+
+.secondary-toolbar.toolbar:backdrop {
+    background-color:@backdrop_background;
+    border:none;
+    color: @backdrop_text;
+    
+    -gtk-image-effect: dim;
+}
+
+.secondary-toolbar.toolbar .linked-button,
+.secondary-toolbar.toolbar .button {
+    padding: 2px;
+    border:none;
+}
+
+/******************
+ * Inline Toolbar *
+ ******************/
+
+.inline-toolbar .toolbar,
+.inline-toolbar.toolbar {
+    border:none;
+    padding-top: 4px;
+    padding-left: 4px;
+    padding-bottom: 4px;
+    padding-right: 4px;
+    background-color: @background;
+
+}
+
+.inline-toolbar .toolbar:backdrop,
+.inline-toolbar.toolbar:backdrop {
+    border:none;
+    padding-top: 4px;
+    padding-left: 4px;
+    padding-bottom: 4px;
+    padding-right: 4px;
+    background-color: @backdrop_background;
+}
+
+
+.inline-toolbar.toolbar.vertical:first-child {
+    border-radius: 0 0 6px 6px;
+    border-width: 1px 1px 0px 1px;
+}
+
+.inline-toolbar.toolbar.vertical:last-child {
+    border-radius: 6px 6px 0px 0px;
+    border-width: 0px 1px 1px 1px;
+}
+
+/* Buttons */
+.inline-toolbar .button.text-button {
+    padding: 2px 16px;
+    background-color: @backdrop_background;
+}
+
+.inline-toolbar .button.image-button,
+.inline-toolbar .button.image-button:active {
+    padding-top: 2px;
+    padding-left: 2px;
+    padding-bottom: 2px;
+    padding-right: 2px;
+    background-color: @backdrop_background;
+}
+
+.inline-toolbar GtkComboBox {
+    color: @text;
+    padding-top: 2px;
+    padding-left: 2px;
+    padding-bottom: 2px;
+    padding-right: 2px;
+    background-color: @backdrop_background;
+}
+
+.inline-toolbar .button {
+    color: @selection;
+    padding-top: 2px;
+    padding-left: 2px;
+    padding-bottom: 2px;
+    padding-right: 2px;
+    background-color: @background;
+}
+
+.inline-toolbar GtkComboBox:active,
+.inline-toolbar .button:active {
+    color: white;
+    background-color: @selection;
+}
+
+.inline-toolbar .separator,
+.inline-toolbar .button .separator,
+.inline-toolbar .button.separator {
+    color: transparent;
+}
+
+/* Hover */
+.inline-toolbar .button:hover {
+    color: white;
+    background-color: @selection;
+}
+
+.inline-toolbar .button:active:hover {
+    color: white;
+    background-color: alpha(@selection,0.7);
+}
+
+
+/* Insensitive */
+.inline-toolbar .button:insensitive,
+.inline-toolbar .button:active:insensitive {
+    border: none;
+    background-color: @insensitive_background;
+    color: @insensitive_text;
+}
+
+.inline-toolbar .separator:insensitive,
+.inline-toolbar .button .separator:insensitive,
+.inline-toolbar .button.separator:insensitive {
+    color: transparent;
+}
+
+/* backdrop */
+.inline-toolbar .button:backdrop,
+.inline-toolbar .button:active:backdrop {
+    color: @backdrop_text;
+    background-color: @backdrop_background;
+}
+
+.inline-toolbar .separator:backdrop,
+.inline-toolbar .button .separator:backdrop,
+.inline-toolbar .button.separator:backdrop {
+    color: transparent;
+}
+
+/********************
+ * Menubar Toolbars *
+ ********************/
+.toolbar.menubar {
+    -GtkToolbar-button-relief: normal;
+}
+
+/**************
+ * Header Bar *
+ **************/
+
+.header-bar,
+.header-bar.toolbar {
+    border:none;
+    padding-top: 4px;
+    padding-left: 6px;
+    padding-bottom: 4px;
+    padding-right: 6px;
+    background-color: @background;
+}
+
+.header-bar:backdrop,
+.header-bar.toolbar:backdrop {
+    background-color: @backdrop_background;
+}
+
+.header-bar .button.text-button {
+    padding: 2px 16px;
+}
+
+.header-bar .button.image-button {
+    padding-top: 4px;
+    padding-left: 4px;
+    padding-bottom: 4px;
+    padding-right: 4px;
+}
+
+/* Title */
+.header-bar .title {
+    font: Bold 11;
+}
+
+.header-bar .title:backdrop {
+    color: @backdrop_text;
+}
+
+/* Subtitle */
+.header-bar .subtitle {
+    font: 9;
+}
+
+.header-bar GtkComboBox,
+.header-bar .button {
+    border: 1px solid @border;
+    color: @text;
+}
+
+.header-bar GtkComboBox:active,
+.header-bar .button:active {
+    color: white;
+    background-color:@selection;
+}
+
+.header-bar GtkComboBox:backdrop,
+.header-bar .button:backdrop,
+.header-bar .button.image-button:backdrop {
+    color: @backdrop_text;
+    background-color: @backdrop_background;
+}
+
+.header-bar GtkComboBox:insensitive,
+.header-bar .button:insensitive {
+    border-color: @insensitive_border;
+    background-color: @insensitive_background;
+    color: @insensitive_text;
+}
+
+.header-bar .button GtkImage:insensitive {
+    color: @insensitive_text;
+}
+
+.header-bar GtkComboBox:hover,
+.header-bar .button:hover {
+    color: @selection;
+    background-color: alpha(@selection,0.1);
+}
+
+.header-bar GtkComboBox:active:hover,
+.header-bar .button:active:hover {
+    color: white;
+    background-color: alpha(@selection,0.7);
+}
+
+
+/*************************
+ * Header bar separator  *
+ *************************/
+
+.header-bar > GtkBox > .separator.vertical {
+    -GtkWidget-wide-separators: 1;
+    -GtkWidget-separator-width: 2px;
+    background: transparent;
+    border:none;
+}
+
+/* Separator */
+.header-bar .separator,
+.header-bar .button .separator,
+.header-bar .button.separator {
+    color: transparent;
+}
+
+/* Close button */
+
+.header-bar .button GtkImage {
+    border-radius: 4px;
+    color: @text;
+    border: 1px solid transparent;
+}
+
+.header-bar .button GtkImage:hover {
+    color: @active_text;
+    border:none;
+}
+
+.header-bar .button GtkImage:active,
+.header-bar .button GtkImage:active:hover {
+    background-color: @selection;
+    box-shadow: inset 0 1px alpha(black, 0.05);
+    color:  white;
+    border-color: @border;
+}
+
+.header-bar .button GtkImage:backdrop {
+    color: @backdrop_text;
+}
+
+.header-bar .button GtkImage:backdrop:hover {
+    color: @foreground;
+}

@@ -1,0 +1,191 @@
+#!/bin/bash
+# -*- Mode: sh;coding: utf-8;indent-tabs-mode: nil;tab-width: 4 -*-
+#
+# Authors:
+#   Sam Hewitt <hewittsamuel@gmail.com>
+#
+# Description:
+#   An installation bash script for Stark GTK Theme
+#
+# Legal Stuff:
+#
+# This file is part of the Stark GTK Theme and is free software;you can redistribute it and/or modify it under
+# the terms of the GNU General Public License as published by the Free Software
+# Foundation;version 3.
+#
+# This file is part of the Stark GTK Theme and is distributed in the hope that it will be useful, but WITHOUT
+# ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+# FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more
+# details.
+#
+# You should have received a copy of the GNU General Public License along with
+# this program;if not, see <https://www.gnu.org/licenses/gpl-3.0.txt>
+
+echo '#----------------------------------------------#'
+echo '#         Stark GTK Theme Install Script       #'
+echo '#----------------------------------------------#'
+
+echo '#----------------------------------------------#'
+echo '#     NOTE: The main Stark theme needs         #'
+echo '#     to be installed otherwise many           #'
+echo '#     icons will be missing.                   #'
+echo '#----------------------------------------------#'
+
+function continue {
+echo ""
+read -p "Do you want to continue? (Y)es, (N)o : " INPUT
+case $INPUT in
+	[Yy]* ) main;;
+    [Nn]* ) exit 99;;
+    * ) echo;echo "Sorry, try again.";continue;;
+esac
+}
+
+function main {
+if [ "$UID" -eq "$ROOT_UID" ];then
+	if [ -d /usr/share/themes/Stark ];then
+		echo
+		read -p "Found an existing installation. Replace it? (Y)es, (N)o : " INPUT
+		case $INPUT in
+		[Yy]* ) 
+			rm -Rf /usr/share/themes/Stark-Ceru 2>/dev/null
+			rm -Rf /usr/share/themes/Stark-Lutu 2>/dev/null
+			rm -Rf /usr/share/themes/Stark-Roja 2>/dev/null
+			rm -Rf /usr/share/themes/Stark-Verd 2>/dev/null
+			rm -Rf /usr/share/themes/Stark-Viol 2>/dev/null
+			;;
+		[Nn]* )
+			;;
+	    * )
+		    clear && echo 'Sorry, try again.'
+		    main
+		    ;;
+		esac
+	fi
+	cp -R ./Stark-Ceru/ /usr/share/themes/
+	cp -R ./Stark-Lutu/ /usr/share/themes/
+	cp -R ./Stark-Roja/ /usr/share/themes/
+	cp -R ./Stark-Verd/ /usr/share/themes/
+	cp -R ./Stark-Viol/ /usr/share/themes/
+	chmod -R 755 /usr/share/themes/Stark-Ceru
+	chmod -R 755 /usr/share/themes/Stark-Lutu
+	chmod -R 755 /usr/share/themes/Stark-Roja
+	chmod -R 755 /usr/share/themes/Stark-Verd
+	chmod -R 755 /usr/share/themes/Stark-Viol
+	echo "Installation complete!"
+	set
+elif [ "$UID" -ne "$ROOT_UID" ];then
+	if [ -d $HOME/.local/share/themes/Stark-Ceru ];then
+		echo
+		read -p "Found an existing installation. Replace it? (Y)es, (N)o : " INPUT
+		case $INPUT in
+		[Yy]* ) 
+			rm -Rf "$HOME/.local/share/themes/Stark-Ceru" 2>/dev/null
+			rm -Rf "$HOME/.themes/Stark-Ceru" 2>/dev/null
+			rm -Rf "$HOME/.local/share/themes/Stark-Lutu" 2>/dev/null
+			rm -Rf "$HOME/.themes/Stark-Lutu" 2>/dev/null
+			rm -Rf "$HOME/.local/share/themes/Stark-Roja" 2>/dev/null
+			rm -Rf "$HOME/.themes/Stark-Roja" 2>/dev/null
+			rm -Rf "$HOME/.local/share/themes/Stark-Verd" 2>/dev/null
+			rm -Rf "$HOME/.themes/Stark-Verd" 2>/dev/null
+			rm -Rf "$HOME/.local/share/themes/Stark-Viol" 2>/dev/null
+			rm -Rf "$HOME/.themes/Stark-Viol" 2>/dev/null
+			;;
+		[Nn]* )
+			;;		
+		* )
+		    clear && echo 'Sorry, try again.'
+		    main
+		    ;;
+		esac
+	fi
+	cp -R ./Stark-Ceru/ $HOME/.local/share/themes/
+	cp -R ./Stark-Ceru/ $HOME/.themes/
+	cp -R ./Stark-Lutu/ $HOME/.local/share/themes/
+	cp -R ./Stark-Lutu/ $HOME/.themes/
+	cp -R ./Stark-Roja/ $HOME/.local/share/themes/
+	cp -R ./Stark-Roja/ $HOME/.themes/
+	cp -R ./Stark-Verd/ $HOME/.local/share/themes/
+	cp -R ./Stark-Verd/ $HOME/.themes/
+	cp -R ./Stark-Viol/ $HOME/.local/share/themes/
+	cp -R ./Stark-Viol/ $HOME/.themes/
+	echo "Installation complete!"
+	set
+fi
+}
+
+function set {
+echo ""
+read -p "Do you want to set Stark as your desktop theme now? (Y)es, (N)o : " INPUT
+case $INPUT in
+	[Yy]* ) settheme;;
+    [Nn]* ) end;;
+    * ) echo;echo "Uh oh, invalid response. Please retry.";set;;
+esac
+}
+
+function settheme {
+echo ''
+echo '1. Stark-Ceru (Blue)'
+echo '2. Stark-Lutu (Orange)'
+echo '3. Stark-Roja (Red)'
+echo '4. Stark-Verd (Green)'
+echo '5. Stark-Viol (Purple)'
+echo ''
+read -p 'Which colour theme would you like (Enter your choice) : ' REPLY
+case $REPLY in
+# Theme Choice
+1)	
+	echo "Setting Stark-Ceru as GTK window theme..."
+	gsettings set org.gnome.desktop.interface gtk-theme "Stark-Ceru"
+	gsettings set org.gnome.desktop.wm.preferences theme "Stark-Ceru"
+	echo "Done."
+	;;
+2)	
+	echo "Setting Stark-Lutu as GTK window theme..."
+	gsettings set org.gnome.desktop.interface gtk-theme "Stark-Lutu"
+	gsettings set org.gnome.desktop.wm.preferences theme "Stark-Lutu"
+	echo "Done."
+	;;
+3)	
+	echo "Setting Stark-Roja as GTK window theme..."
+	gsettings set org.gnome.desktop.interface gtk-theme "Stark-Roja"
+	gsettings set org.gnome.desktop.wm.preferences theme "Stark-Roja"
+	echo "Done."
+	;;
+4)	
+	echo "Setting Stark-Verd as GTK window theme..."
+	gsettings set org.gnome.desktop.interface gtk-theme "Stark-Verd"
+	gsettings set org.gnome.desktop.wm.preferences theme "Stark-Verd"
+	echo "Done."
+	;;
+5)	
+	echo "Setting Stark-Viol as GTK window theme..."
+	gsettings set org.gnome.desktop.interface gtk-theme "Stark-Viol"
+	gsettings set org.gnome.desktop.wm.preferences theme "Stark-Viol"
+	echo "Done."
+	;;
+# Invalid choice
+* ) 
+    clear && echo 'Not an option, try again.' && settheme;;
+esac
+end
+}
+
+function end {
+	echo "Exiting"
+	exit 0
+}
+
+ROOT_UID=0
+if [ "$UID" -ne "$ROOT_UID" ];then
+	echo
+	echo "Stark GTK Theme will be installed in '$HOME/.local/share/themes'."
+	echo "To make them available to all users, run this script as root."
+	continue
+else
+	echo
+	echo "Stark GTK Theme will be installed in '/usr/share/themes'"
+	echo "It will be available to all users."
+	continue
+fi

@@ -1,0 +1,178 @@
+/* Copyright 2014 Sam Hewitt.
+*
+* This file is part of the Stark GTK theme .
+*
+* The Stark GTK theme is free software: you can redistribute it
+* and/or modify it under the terms of the GNU General Public License as
+* published by the Free Software Foundation, either version 3 of the
+* License, or (at your option) any later version.
+*
+* The Stark GTK theme is distributed in the hope that it will be
+* useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+* Public License for more details.
+*
+* You should have received a copy of the GNU General Public License along
+* with the Stark GTK theme . If not, see http://www.gnu.org/licenses/.
+*/
+
+
+/***********
+ * Buttons *
+ ***********/
+ 
+.button {
+    -GtkWidget-focus-padding: 0;
+    -GtkWidget-focus-line-width: 0;
+    padding: 3px 8px;
+    background-color: @background;
+    border-radius: 6px;
+    border: 1px solid @border;
+}
+
+/* Focus */
+.button:focus {
+    border-radius: 6px;
+    padding: 3px 8px;
+    box-shadow:inset 0 0 0 1px alpha(@selection,0.4);
+    border: 1px solid @border;
+}
+
+/* Hover */
+.button:hover {
+    border-radius: 6px;
+    padding: 3px 8px;
+    color: @selection;
+    background: alpha(@selection,0.1);
+    border:1px solid @selection;
+}
+
+/* Active/Pressed Button */
+.button:active,
+.button:selected {
+    border-radius: 6px;
+    padding: 3px 8px;
+    /*font: bold;*/
+    color: white;
+    background-color: @selection;
+    border: 1px solid @border;
+}
+
+
+/* Separator */
+.button .separator,
+.button.separator {
+    border-radius: 6px;
+    color: @border;
+}
+
+.button .separator:insensitive,
+.button.separator:insensitive {
+    border-radius: 6px;
+    color: @insensitive_border;
+}
+
+/* Insensitive Button */
+.button:insensitive,
+.button:active:insensitive {
+    border-radius: 6px;
+    border: 1px solid @insensitive_border;
+    background-color: @insensitive_background;
+    color: @insensitive_text;
+}
+
+/* backdrop Button */
+.button:backdrop,
+.button.default:backdrop,
+.button:active:backdrop {
+    border-radius: 6px;
+    border: 1px solid @backdrop_border;
+    background-color: @backdrop_background;
+    color: @backdrop_text;
+}
+
+
+/* Default Button */
+.button.default {
+    border-radius: 6px;
+    color: white;
+    background:@selection;
+    border: 1px solid @selection;
+}
+
+.button.default:hover,
+.button.default:active {
+    border-radius: 6px;
+    color: white;
+    background:@selection;
+    border: 1px solid @selection;
+}
+
+.button.default:active:hover {
+    border-radius: 6px;
+    color: white;
+    background:@selection;
+    border: 1px solid @selection;
+}
+
+/****************************
+ * Suggested action buttons *
+ ****************************/
+.toolbar .suggested-action.button,
+.suggested-action.button {
+    color: white;
+    background:@selection;
+    border: 1px solid @selection;
+}
+
+.toolbar .suggested-action.button:hover,
+.suggested-action.button:hover {
+    color: white;
+    background:@selection;
+    border: 1px solid @selection;
+}
+
+.toolbar .suggested-action.button:active,
+.toolbar .suggested-action.button:hover:active,
+.suggested-action.button:active,
+.suggested-action.button:hover:active {
+    color: white;
+    background:@selection;
+    border: 1px solid @selection;
+}
+
+.toolbar .suggested-action.button:backdrop,
+.suggested-action.button:backdrop {
+    background-image: none;
+}
+
+.toolbar .suggested-action.button,
+.suggested-action.button {
+    /*text-shadow: 0 1px @suggested_action_button_shadow;*/
+    /*icon-shadow: 0 1px @suggested_action_button_shadow;*/
+}
+
+.toolbar .suggested-action.button:active,
+.toolbar .suggested-action.button:hover:active,
+.suggested-action.button:active,
+.suggested-action.button:hover:active {
+    /*text-shadow: 0 1px shade(@suggested_action_button_shadow, 1.15);*/
+    /*icon-shadow: 0 1px shade(@suggested_action_button_shadow, 1.15);*/
+}
+
+
+.suggested-action.button:insensitive,
+.suggested-action.button:active *:insensitive {
+    background-image: none;
+    background-color: @insentitive_background;
+}
+
+.suggested-action.button GtkLabel:insensitive,
+.suggested-action.button GtkLabel:backdrop,
+.suggested-action.button GtkLabel:backdrop:insensitive {
+    color: @insensitive_foreground;
+}
+
+.suggested-action.button:insensitive:backdrop {
+    background-color: alpha(@insentitive_background,0.7);
+}

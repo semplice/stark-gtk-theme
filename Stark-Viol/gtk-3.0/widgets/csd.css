@@ -1,0 +1,101 @@
+/* Copyright 2014 Sam Hewitt.
+*
+* This file is part of the Stark GTK theme.
+*
+* The Stark GTK theme is free software: you can redistribute it
+* and/or modify it under the terms of the GNU General Public License as
+* published by the Free Software Foundation, either version 3 of the
+* License, or (at your option) any later version.
+*
+* The Stark GTK theme is distributed in the hope that it will be
+* useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+* Public License for more details.
+*
+* You should have received a copy of the GNU General Public License along
+* with the Stark GTK theme. If not, see http://www.gnu.org/licenses/.
+*/
+
+/*******
+ * CSD *
+ *******/
+.titlebar {
+    border-radius: 6px 6px 0px 0px;
+    border-width: 0px;
+    background-image: linear-gradient( to top,
+                                @background,
+                                @background);
+}
+
+.titlebar.default-decoration {
+    border: none;
+}
+
+.titlebar .title {
+    font: bold 11;
+}
+
+.titlebar:backdrop {
+    background-image: linear-gradient( to top,
+                                @backdrop_background,
+                                @backdrop_background);
+}
+
+.titlebar .titlebutton {
+    color: @text;
+    padding: 4px 8px 4px 8px;
+    border-radius: 6px;
+    border: 1px solid transparent;
+}
+
+.titlebar .titlebutton:active {
+    color: white;
+    background: @selection;
+}
+
+.titlebar .titlebutton:hover {
+    font: bold;
+    color: @selection;
+    background: alpha(@selection,0.1);
+    border: 1px solid transparent;
+}
+
+.titlebar .titlebutton:active {
+    font: bold;
+    color: white;
+    background-color: @selection;
+}
+
+.titlebar .right .titlebutton:first-child {
+/*    border-left: 1px solid @menu_separator;*/
+}
+
+.titlebar .right .titlebutton:last-child {
+
+}
+
+.titlebar .left .titlebutton:last-child {
+/*    border-right: 1px solid @menu_separator;*/
+}
+
+.titlebar .left .titlebutton:first-child {
+
+}
+
+.titlebar .titlebutton:backdrop {
+    color: @backdrop_text;
+}
+
+/* Window Frame */
+.window-frame {
+    border: 1px solid @base;
+    border-radius: 6px 6px 0 0;
+    /*Window shadow*/
+    box-shadow: 0 2px 8px 3px alpha(black,0.4);
+    /* this is used for the resize cursor area */
+    margin: 10px;
+}
+
+.window-frame:backdrop {
+    box-shadow: 0 2px 5px 1px alpha(black,0.4);
+}

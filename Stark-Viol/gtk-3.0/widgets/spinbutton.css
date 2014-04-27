@@ -1,0 +1,152 @@
+/* Copyright 2014 Sam Hewitt.
+*
+* This file is part of the Stark GTK theme.
+*
+* The Stark GTK theme is free software: you can redistribute it
+* and/or modify it under the terms of the GNU General Public License as
+* published by the Free Software Foundation, either version 3 of the
+* License, or (at your option) any later version.
+*
+* The Stark GTK theme is distributed in the hope that it will be
+* useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+* Public License for more details.
+*
+* You should have received a copy of the GNU General Public License along
+* with the Stark GTK theme. If not, see http://www.gnu.org/licenses/.
+*/
+
+
+/**************
+ * Spinbutton *
+ **************/
+.spinbutton.button,
+.spinbutton .button {
+    padding: 2px 4px;
+    background-color: @base;
+    color: @text;
+    border:none;
+}
+
+.spinbutton.entry {
+    background-color: @base;
+}
+
+.spinbutton.entry:selected {
+    background-color: @base;
+    color: @text;
+}
+
+.spinbutton.entry:focus {
+    background-color: @base;
+    color: @text;
+}
+
+.spinbutton .button:first-child {
+}
+
+.spinbutton .button:last-child {
+}
+
+/*Button Hover*/
+.spinbutton .button:hover,
+.spinbutton .button:hover:focus {
+    color: white;
+    background-color: @selection;
+}
+
+.spinbutton:active,
+.spinbutton .button:active,
+.spinbutton .button:active:focus,
+.spinbutton .button:active:hover:focus {
+    color: @text;
+}
+
+.spinbutton .button,
+.spinbutton .button:focus {
+    color: @text;
+}
+
+.spinbutton.entry:insensitive,
+.spinbutton .button:insensitive,
+.spinbutton .button:focus:insensitive {
+    color: @insensitive_text;
+    background-color: @insensitive_background;
+}
+
+.spinbutton.entry:backdrop,
+.spinbutton .button:backdrop {
+    color: @backdrop_text;
+    background-color: @backdrop_background;
+}
+
+/* Separator */
+.spinbutton .separator,
+.spinbutton.separator {
+    color: transparent;
+}
+
+.spinbutton .separator:insensitive,
+.spinbutton.separator:insensitive {
+    color: transparent;
+}
+
+/***********************
+ * Spinbutton Vertical *
+ ***********************/
+
+.spinbutton.vertical .button {
+    padding: 2px 4px;
+}
+
+.spinbutton.vertical.entry {
+    background-color: transparent;
+}
+
+.spinbutton.vertical.entry:selected {
+    background-color: transparent;
+    box-shadow: inset 0 1px alpha(black, 0.1);
+    color: @text;
+}
+
+.spinbutton.vertical .button:hover,
+.spinbutton.vertical .button:hover:focus {
+    color: white;
+    background-color: @selection;
+    background-image: none;
+}
+
+.spinbutton.vertical:active,
+.spinbutton.vertical .button:active,
+.spinbutton.vertical .button:active:focus,
+.spinbutton.vertical .button:active:hover:focus {
+    color: @text;
+    background-color: transparent;
+}
+
+.spinbutton.vertical .button
+.spinbutton.vertical .button:focus {
+    color: @text;
+    background-image: none;
+}
+
+.spinbutton.vertical.entry:insensitive,
+.spinbutton.vertical .button:insensitive
+.spinbutton.vertical .button:focus:insensitive {
+    color: @insensitive_text;
+    background-color: transparent;
+    background-image: none;
+}
+
+.spinbutton.vertical.entry:backdrop,
+.spinbutton.vertical .button:backdrop {
+    color: @backdrop_text;
+    background-color: transparent;
+    background-image: none;
+}
+
+.spinbutton.vertical .button:first-child {
+}
+
+.spinbutton.vertical .button:last-child {
+}

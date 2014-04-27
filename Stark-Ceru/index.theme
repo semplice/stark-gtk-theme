@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=Stark-Ceru
+Comment=The one and only.
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=Stark-Ceru
+MetacityTheme=Stark-Ceru
+IconTheme=Moka
