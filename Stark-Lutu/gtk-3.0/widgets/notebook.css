@@ -1,6 +1,6 @@
 /* Copyright 2014 Sam Hewitt.
 *
-* This file is part of the Stark GTK theme .
+* This file is part of the Stark GTK theme.
 *
 * The Stark GTK theme is free software: you can redistribute it
 * and/or modify it under the terms of the GNU General Public License as
@@ -13,7 +13,7 @@
 * Public License for more details.
 *
 * You should have received a copy of the GNU General Public License along
-* with the Stark GTK theme . If not, see http://www.gnu.org/licenses/.
+* with the Stark GTK theme. If not, see http://www.gnu.org/licenses/.
 */
 
 /*******************
@@ -55,24 +55,24 @@
 
 .notebook tab {
     border: none;
-    background: transparent;
+    background: @background;
     color: @text;
 }
 .notebook tab:active {
     border: none;
-    background: transparent;
+    background: @base;
     color: @text;
 }
 
 .notebook tab:backdrop {
     border: none;
-    background: transparent;
+    background: @background;
     color: @backdrop_text;
 }
 
 .notebook tab:insensitive {
     border: none;
-    background: transparent;
+    background: @background;
     color: @insensitive_text;
 }
 
@@ -281,12 +281,14 @@
     background-color: @base;
     border:none;
     background-clip: border-box;
+    box-shadow: none;
 }
 
 .dynamic-notebook:backdrop {
     background-color: @backdrop_base;
     border:none;
     background-clip: border-box;
+    box-shadow: none;
 }
 
 
@@ -303,11 +305,16 @@
 .dynamic-notebook .notebook tab {
     border-radius: 0;
     background-image: none;
-    background-color: transparent;
+    background-color: @background;
     border-width: 0;
+    box-shadow: none;
 }
 
 /*----- Tab indicator bar -----*/
+
+.dynamic-notebook tab {
+    box-shadow: none;
+}
 
 /* Normal */
 .dynamic-notebook tab.top {
@@ -420,12 +427,5 @@
 }
 
 .dynamic-notebook .notebook tab GtkImage {
-    color: shade (@background, 0.35);
-}
-
-.dynamic-notebook .notebook tab:active {
-    background: transparent;
-    border: none;
-    color: @text_color;
-    box-shadow:inset 0 -3px 0 0 @selection;
+    color: @background;
 }

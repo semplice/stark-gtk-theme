@@ -7,7 +7,7 @@ import subprocess
 
 INKSCAPE = '/usr/bin/inkscape'
 OPTIPNG = '/usr/bin/optipng'
-SRC = os.path.join('.', 'src/Viol')
+SRC = os.path.join('.', 'src/Viol/metacity')
 OUTPUT = "Stark-Viol"
 
 inkscape_process = None

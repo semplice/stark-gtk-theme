@@ -7,7 +7,7 @@ import subprocess
 
 INKSCAPE = '/usr/bin/inkscape'
 OPTIPNG = '/usr/bin/optipng'
-SRC = os.path.join('.', 'src/Roja')
+SRC = os.path.join('.', 'src/Roja/gtk3')
 OUTPUT = 'Stark-Roja'
 
 inkscape_process = None

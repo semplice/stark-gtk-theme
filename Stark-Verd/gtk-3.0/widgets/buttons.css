@@ -44,7 +44,7 @@
     padding: 3px 8px;
     color: @selection;
     background: alpha(@selection,0.1);
-    border:1px solid @selection;
+    border:1px solid @border;
 }
 
 /* Active/Pressed Button */

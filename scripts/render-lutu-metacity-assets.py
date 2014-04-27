@@ -7,7 +7,7 @@ import subprocess
 
 INKSCAPE = '/usr/bin/inkscape'
 OPTIPNG = '/usr/bin/optipng'
-SRC = os.path.join('.', 'src/Lutu')
+SRC = os.path.join('.', 'src/Lutu/metacity')
 OUTPUT = "Stark-Lutu"
 
 inkscape_process = None

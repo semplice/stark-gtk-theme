@@ -7,7 +7,7 @@ import subprocess
 
 INKSCAPE = '/usr/bin/inkscape'
 OPTIPNG = '/usr/bin/optipng'
-SRC = os.path.join('.', 'src/Ceru')
+SRC = os.path.join('.', 'src/Ceru/unity')
 OUTPUT = 'Stark-Ceru'
 
 inkscape_process = None

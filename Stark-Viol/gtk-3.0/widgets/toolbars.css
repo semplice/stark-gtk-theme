@@ -363,7 +363,7 @@
 
 .header-bar,
 .header-bar.toolbar {
-    border:none;
+    border-bottom: 1px solid @border;
     padding-top: 4px;
     padding-left: 6px;
     padding-bottom: 4px;
