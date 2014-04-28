@@ -20,8 +20,8 @@
  * Action bars *
  ***************/
 .action-bar {
-    border-width: 1px 0 0;
-    border: solid @border;
+    border: 1px solid @border;
+    background-image: none;
     background: @background;
 
     padding: 6px 6px 5px 6px;
@@ -31,6 +31,7 @@
 .action-bar:backdrop {
     border:none;
     box-shadow: none;
+    background-image: none;
     background-color: @backdrop_background;
 }
 

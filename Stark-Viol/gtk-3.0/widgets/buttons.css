@@ -128,7 +128,7 @@
 .toolbar .suggested-action.button:hover,
 .suggested-action.button:hover {
     color: white;
-    background:@selection;
+    background: alpha(@selection, 0.1);
     border: 1px solid @border;
 }
 
@@ -137,27 +137,26 @@
 .suggested-action.button:active,
 .suggested-action.button:hover:active {
     color: white;
-    background:@selection;
+    background: @selection;
     border: 1px solid @border;
 }
 
 .toolbar .suggested-action.button:backdrop,
 .suggested-action.button:backdrop {
     background-image: none;
+    background:@backdrop_background;
 }
 
 .toolbar .suggested-action.button,
 .suggested-action.button {
-    /*text-shadow: 0 1px @suggested_action_button_shadow;*/
-    /*icon-shadow: 0 1px @suggested_action_button_shadow;*/
+    border: 1px solid @border;
 }
 
 .toolbar .suggested-action.button:active,
 .toolbar .suggested-action.button:hover:active,
 .suggested-action.button:active,
 .suggested-action.button:hover:active {
-    /*text-shadow: 0 1px shade(@suggested_action_button_shadow, 1.15);*/
-    /*icon-shadow: 0 1px shade(@suggested_action_button_shadow, 1.15);*/
+    border: 1px solid @border;
 }
 
 

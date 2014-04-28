@@ -250,10 +250,10 @@
  * Infobar colors *
  ******************/
 
-@define-color infobar_background #51B9DC;
+@define-color infobar_background #8ED2E8;
 @define-color infobar_foreground @foreground;
 
-@define-color link #51B9DC;
+@define-color link #8ED2E8;
 @define-color question #60ade8;
 @define-color warning #f49f25;
 @define-color error #e50e0e;

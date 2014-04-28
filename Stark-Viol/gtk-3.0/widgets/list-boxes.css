@@ -28,6 +28,7 @@ EggListBox:hover {
 }
 
 EggListBox:selected {
+    color: white;
     background-color: @selection;
     box-shadow:inset 0 0 0 1px  @selection;
 }
