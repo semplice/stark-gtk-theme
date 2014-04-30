@@ -7,7 +7,7 @@ Stark GTK Theme is distributed under the terms the GNU GPL v.3
 
 ###Preamble
 
-If you find any bugs or issues with Stark or if you have a question, you can visit Stark's primary issue tracker on [GitHub](https://github.com/snwh/stark-gtk-theme/issues).
+If you find any bugs or issues with Stark or if you have a question, you can visit Stark's primary issue tracker on [GitHub](https://github.com/moka-project/stark-gtk-theme/issues).
 
 ###Download
 
@@ -15,11 +15,11 @@ Stark can be downloaded [here](http://www.mokaproject.com/stark-gtk-theme/).
 
 ###Getting the Source
 
-The source for Stark GTK3 Theme can be found [here](https://github.com/snwh/stark-gtk-theme).
+The source for Stark GTK3 Theme can be found [here](https://github.com/moka-project/stark-gtk-theme).
 
 Alternatively, you can clone the latest version its git repository:
 
-    git clone https://github.com/snwh/stark-gtk-theme.git
+    git clone https://github.com/moka-project/stark-gtk-theme.git
 
 ###Using the Source
 
