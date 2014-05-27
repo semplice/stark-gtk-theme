@@ -49,12 +49,12 @@ UnityDecoration.top {
     border: none;
     border-radius: 8px 8px 0 0;
     background-image: none;
-    background-color: @panel;
-    color: @panel_text;
+    background-color: @background;
+    color: @text;
 }
 
 UnityDecoration.top.menuitem {
-    color: @panel_text;
+    color: @text;
 }
 
 UnityDecoration.top:backdrop {
@@ -69,7 +69,7 @@ UnityDecoration.right {
     background-size: 1px;
     background-repeat: repeat-x;
     background-image: -gtk-gradient (linear, left top, left bottom,
-                                     color-stop (0, @panel),
+                                     color-stop (0, @background),
                                      color-stop (0.5, @base),
                                      color-stop (1, @base));
     /*background-image: none;*/
@@ -84,7 +84,7 @@ UnityDecoration.left:backdrop,
 UnityDecoration.right:backdrop,
 UnityDecoration.bottom:backdrop {
     background-color: alpha(white,0.4);
-    color: shade(@panel_text, 0.99);
+    color: shade(@text, 0.99);
 }
 
 /***************
@@ -93,14 +93,14 @@ UnityDecoration.bottom:backdrop {
 
 UnityPanelWidget,
 .unity-panel {
-	background-color: @panel;
-	color: @panel_text;
+	background-color: @background;
+	color: @text;
 }
 
 .unity-panel.menuitem,
 .unity-panel .menuitem {
     border-width: 0 1px;
-    color: @panel_text;
+    color: @text;
 }
 
 .unity-panel.menubar,
@@ -120,15 +120,15 @@ UnityPanelWidget,
     border: 1px solid transparent;
     background-color: transparent;
     background-image: none;
-    color: @panel_text;
+    color: @text;
 }
 
 .unity-panel.menubar.menuitem:hover,
 .unity-panel.menubar .menuitem:hover {
     border-radius: 4px 4px 0px 0px;
     border-bottom: 0px;
-    border: 1px solid shade(@panel, 0.7);
-    background-color: shade(@panel, 0.8);
+    border: 1px solid shade(@background, 0.7);
+    background-color: shade(@background, 0.8);
     color: white;
 }
 
