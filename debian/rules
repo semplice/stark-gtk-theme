@@ -4,4 +4,4 @@
 	dh $@ 
 
 override_dh_auto_install:
-    --sourcedir=Stark-Ceru, Stark-Dark, Stark-Lutu, Stark-Roja, Stark-Verd, Stark-Viol,
+    --sourcedir=Stark-Ubun, Stark-Ceru, Stark-Dark, Stark-Lutu, Stark-Roja, Stark-Verd, Stark-Viol,

@@ -38,6 +38,7 @@ Stark GTK3 Theme
 
 %install
 install -dpm 0755 $RPM_BUILD_ROOT%{_datadir}/themes/
+cp -a Stark-Ubun/ $RPM_BUILD_ROOT%{_datadir}/themes/
 cp -a Stark-Ceru/ $RPM_BUILD_ROOT%{_datadir}/themes/
 cp -a Stark-Lutu/ $RPM_BUILD_ROOT%{_datadir}/themes/
 cp -a Stark-Roja/ $RPM_BUILD_ROOT%{_datadir}/themes/
@@ -46,6 +47,7 @@ cp -a Stark-Viol/ $RPM_BUILD_ROOT%{_datadir}/themes/
 
 %files
 %doc {AUTHORS,LICENSE}
+%{_datadir}/themes/Stark-Ubun/
 %{_datadir}/themes/Stark-Ceru/
 %{_datadir}/themes/Stark-Lutu/
 %{_datadir}/themes/Stark-Roja/

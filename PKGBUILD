@@ -22,6 +22,7 @@ pkgver() {
 package() {
 
   # create theme dirs
+  install -d -m 755 "$pkgdir"/usr/share/themes/Stark-Ubun
   install -d -m 755 "$pkgdir"/usr/share/themes/Stark-Ceru
   install -d -m 755 "$pkgdir"/usr/share/themes/Stark-Lutu
   install -d -m 755 "$pkgdir"/usr/share/themes/Stark-Roja 
@@ -29,6 +30,8 @@ package() {
   install -d -m 755 "$pkgdir"/usr/share/themes/Stark-Viol
 
   # install theme
+  cd $srcdir/stark-gtk-theme/Stark-Ubun
+  cp -r . "$pkgdir"/usr/share/themes/Stark-Ubun/
   cd $srcdir/stark-gtk-theme/Stark-Ceru
   cp -r . "$pkgdir"/usr/share/themes/Stark-Ceru/
   cd $srcdir/stark-gtk-theme/Stark-Lutu
