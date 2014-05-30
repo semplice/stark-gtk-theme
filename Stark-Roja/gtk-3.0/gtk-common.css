@@ -33,6 +33,7 @@
 /* Unfocused colors */
 @define-color backdrop_base shade(@base, 0.95);
 @define-color backdrop_background shade(@background, 0.99);
+@define-color backdrop_panel shade(@panel, 0.99);
 @define-color backdrop_foreground shade(@foreground, 1.02);
 @define-color backdrop_border shade(@base, 0.9);
 @define-color backdrop_separator shade(@separator, 0.99);
@@ -250,10 +251,10 @@
  * Infobar colors *
  ******************/
 
-@define-color infobar_background #EC8C8C;
+@define-color infobar_background #8ED2E8;
 @define-color infobar_foreground @foreground;
 
-@define-color link #EC8C8C;
+@define-color link #8ED2E8;
 @define-color question #60ade8;
 @define-color warning #f49f25;
 @define-color error #e50e0e;

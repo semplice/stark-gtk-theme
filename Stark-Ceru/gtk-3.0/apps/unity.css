@@ -90,6 +90,10 @@ UnityDecoration.right:backdrop,
 UnityDecoration.bottom:backdrop {
     background-color: alpha(white,0.4);
     color: shade(@panel_text, 0.99);
+    background-image: -gtk-gradient (linear, left top, left bottom,
+                                     color-stop (0, @backdrop-panel),
+                                     color-stop (0.5, @backdrop_border),
+                                     color-stop (1, @backdrop_border));
 }
 
 /***************
